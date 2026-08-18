@@ -1,0 +1,17 @@
+{
+  "name": "t1d-prediction-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "React Native T1D glucose prediction app",
+  "author": "SFH008",
+  "license": "MIT",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start -a",
+    "ios": "expo start -i",
+    "test": "jest --detectOpenHandles",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src __tests__",
+    "type-check": "tsc --noEmit"
+  }
+}
