@@ -189,3 +189,15 @@ web-build/
 *.mobileprovision
 .env
 .env.local
+
+# T1D App specific
+.expo/
+.expo-shared/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.env
+.env.local
