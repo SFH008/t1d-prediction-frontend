@@ -2,7 +2,7 @@ import { breakpoints } from './breakpoints';
 
 export function getResponsiveColumnCount(width: number): number {
   if (width <= breakpoints.compactMax) {
-    return 2;
+    return 3;
   }
 
   if (width <= breakpoints.mediumMax) {

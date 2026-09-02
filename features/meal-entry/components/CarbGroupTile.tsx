@@ -70,7 +70,7 @@ export function CarbGroupTile({
         ]}
       >
         <Icon
-          size={60}
+          size={34}
           color={disabled ? colors.textSecondary : colors.text}
         />
       </View>
@@ -119,21 +119,21 @@ export function CarbGroupTile({
 
 const styles = StyleSheet.create({
   tile: {
-    minHeight: 168,
+    minHeight: 96,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: spacing.lg,
+    padding: spacing.xs,
     borderWidth: 1,
     borderRadius: radius.lg,
     position: 'relative',
   },
 
   selected: {
-    borderWidth: 3,
+    borderWidth: 2,
   },
 
   pressed: {
-    transform: [{ scale: 0.98 }],
+    transform: [{ scale: 0.97 }],
     opacity: 0.88,
   },
 
@@ -142,19 +142,20 @@ const styles = StyleSheet.create({
   },
 
   iconContainer: {
-    width: 88,
-    height: 88,
+    width: 52,
+    height: 52,
     borderRadius: radius.full,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.md,
+    marginBottom: spacing.xs,
   },
 
   label: {
     ...typography.label,
     color: colors.text,
     textAlign: 'center',
-    lineHeight: 19,
+    lineHeight: 14,
+    fontSize: 11,
   },
 
   disabledLabel: {
@@ -163,10 +164,10 @@ const styles = StyleSheet.create({
 
   selectedIndicator: {
     position: 'absolute',
-    top: spacing.sm,
-    right: spacing.sm,
-    width: 26,
-    height: 26,
+    top: 5,
+    right: 5,
+    width: 22,
+    height: 22,
     borderRadius: radius.full,
     justifyContent: 'center',
     alignItems: 'center',
@@ -174,20 +175,20 @@ const styles = StyleSheet.create({
 
   selectedMark: {
     color: colors.surface,
-    fontSize: 15,
+    fontSize: 13,
     fontWeight: '700',
   },
 
   disabledBadge: {
     position: 'absolute',
-    left: spacing.sm,
-    right: spacing.sm,
-    bottom: spacing.sm,
+    left: 4,
+    right: 4,
+    bottom: 3,
     alignItems: 'center',
   },
 
   disabledBadgeText: {
-    fontSize: 11,
+    fontSize: 9,
     fontWeight: '600',
     color: colors.textSecondary,
   },
