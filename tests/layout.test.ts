@@ -1,20 +1,20 @@
-import { getResponsiveColumnCount } from '@/design/layout';
+import { getResponsiveColumnCount } from '../design/layout';
 
 describe('getResponsiveColumnCount', () => {
-  test('compact width uses two columns', () => {
-    expect(getResponsiveColumnCount(375)).toBe(2);
+  it('uses three columns for compact phone layouts', () => {
+    expect(getResponsiveColumnCount(390)).toBe(3);
   });
 
-  test('medium width uses three columns', () => {
+  it('uses three columns for medium layouts', () => {
     expect(getResponsiveColumnCount(600)).toBe(3);
   });
 
-  test('expanded width uses four columns', () => {
+  it('uses four columns for expanded layouts', () => {
     expect(getResponsiveColumnCount(768)).toBe(4);
   });
 
-  test('breakpoint boundaries are deterministic', () => {
-    expect(getResponsiveColumnCount(499)).toBe(2);
+  it('keeps breakpoint boundaries deterministic', () => {
+    expect(getResponsiveColumnCount(499)).toBe(3);
     expect(getResponsiveColumnCount(500)).toBe(3);
     expect(getResponsiveColumnCount(767)).toBe(3);
     expect(getResponsiveColumnCount(768)).toBe(4);

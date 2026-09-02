@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
 
   content: {
-    paddingVertical: spacing.sm,
+    paddingVertical: 2,
   },
 
   row: {
@@ -100,6 +100,6 @@ const styles = StyleSheet.create({
   },
 
   cell: {
-    padding: spacing.sm,
+    padding: 4,
   },
 });
