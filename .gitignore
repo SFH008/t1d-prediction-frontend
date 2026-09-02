@@ -201,3 +201,20 @@ web-build/
 *.mobileprovision
 .env
 .env.local
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Dependencies
+node_modules/
+
+# Native generated projects
+android/
+ios/
+
+# Environment
+.env
+.env.*
+!.env.example
