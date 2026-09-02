@@ -1,42 +1,74 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+} from 'react-native';
 
-import { FoundationSvgIcon } from '@/components/icons/FoundationSvgIcon';
+import { carbIconRegistry } from '@/components/icons/carb';
+import { Screen } from '@/components/ui/Screen';
 import { colors } from '@/design/colors';
 import { spacing } from '@/design/spacing';
 import { typography } from '@/design/typography';
+import {
+  carbGroups,
+  type CarbGroupId,
+} from '@/domain/carbs';
+import { CarbGroupGrid } from '@/features/meal-entry/components/CarbGroupGrid';
 
 export default function HomeScreen() {
+  const [selected, setSelected] =
+    useState<CarbGroupId | undefined>();
+
   return (
-    <View style={styles.container}>
-      <FoundationSvgIcon />
+    <Screen>
+      <ScrollView
+        contentContainerStyle={styles.content}
+      >
+        <Text style={styles.eyebrow}>
+          Meal entry
+        </Text>
 
-      <Text style={styles.title}>T1D Prediction App</Text>
+        <Text style={styles.title}>
+          What are you eating?
+        </Text>
 
-      <Text style={styles.subtitle}>
-        Frontend foundation ready
-      </Text>
-    </View>
+        <Text style={styles.subtitle}>
+          Choose a carbohydrate group to continue.
+        </Text>
+
+        <CarbGroupGrid
+          groups={carbGroups}
+          icons={carbIconRegistry}
+          selectedId={selected}
+          onSelect={setSelected}
+        />
+      </ScrollView>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: colors.background,
-    padding: spacing.xl,
+  content: {
+    padding: spacing.lg,
+    paddingTop: spacing.xl,
+  },
+
+  eyebrow: {
+    ...typography.label,
+    color: colors.accent,
+    marginBottom: spacing.sm,
   },
 
   title: {
     ...typography.heading,
     color: colors.text,
-    marginTop: spacing.lg,
   },
 
   subtitle: {
     ...typography.body,
     color: colors.textSecondary,
-    marginTop: spacing.md,
+    marginTop: spacing.sm,
+    marginBottom: spacing.lg,
   },
 });
