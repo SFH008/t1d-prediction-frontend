@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "T1D Prediction",
+    "slug": "t1d-prediction-frontend",
+    "version": "0.1.0",
+    "orientation": "default",
+    "scheme": "t1dprediction",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
